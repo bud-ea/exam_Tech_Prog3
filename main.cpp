@@ -7,10 +7,13 @@ int main()
 {
     Matr3Diag matrA;
     matrA.input(7);
-    //matrA.print();
-    std::cout << matrA;
-    matrA += matrA;
-    std::cout << matrA;
+    matrA.print();
+//    matrA.multiplication(matrA);
+    
+    std::cout << "Тестирование умножения\n" <<  matrA.multiplication(matrA);
+    
+//    matrA += matrA;
+//    std::cout << matrA;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"

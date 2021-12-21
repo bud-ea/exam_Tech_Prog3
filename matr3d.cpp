@@ -48,6 +48,19 @@ Matr3Diag Matr3Diag::sum(const Matr3Diag& temp)
 	return res;
 }
 
+Matr3Diag Matr3Diag::multiplication(const Matr3Diag& temp)
+{
+    if (this->n != temp.n)
+        return *this;
+    
+    Matr3Diag res(temp);
+    for (int i = 0; i < 3*this->n; i++)
+        for (int j = 0; j < this->n; j++)
+            res.elem[i] += this->elem[i] * this->elem[n*j + i];
+    
+    return res;
+}
+
 void Matr3Diag::print() const
 {
 	for (int i = 0; i < this->n; i++)
